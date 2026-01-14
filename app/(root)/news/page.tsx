@@ -363,7 +363,7 @@ function NewsDetailPage({
 	if (!news) return null
 
 	return (
-		<div className='min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-slate-100'>
+		<div className='min-h-screen '>
 			{/* Breadcrumb */}
 			<div className='bg-white shadow-sm border-b'>
 				<div className='max-w-4xl mx-auto px-4 py-4'>

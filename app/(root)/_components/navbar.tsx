@@ -1,19 +1,38 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import Logo from '@/components/ui/header/logo'
 import Navigation from '@/components/ui/header/navigation'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import SearchBar from './search'
 
 function Navbar() {
+	const [isScrolled, setIsScrolled] = useState(false)
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 50)
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 	return (
 		<div
 			className='relative h-42 container  max-w-8xl mx-auto flex flex-col justify-center px-12 items-center'
 			style={{ backgroundImage: "url('/banner.png')" }}
 		>
 			<div className='h-32 container  max-w-8xl mx-auto flex justify-between px-12 items-center'>
-				<div className='text-2xl font-bold w-xl text-white'>
-					Alisher Navoiy nomidagi Toshkent davlat o&apos;zbek tili va adabiyot
-					universiteti
-				</div>
+				<motion.div
+					initial={{ opacity: 0, x: -20 }}
+					animate={{ opacity: 1, x: 0 }}
+					className='max-w-md'
+				>
+					<h1 className='text-white text-lg font-bold leading-tight drop-shadow-lg'>
+						Alisher Navoiy nomidagi Toshkent davlat o&apos;zbek tili va adabiyot
+						universiteti
+					</h1>
+				</motion.div>
 				<div className='absolute top-0 left-1/2 -translate-x-1/2 border-white/50 px-6 pt-4 pb-8 rounded-b-full bg-black/70'>
 					<Logo />
 				</div>
@@ -27,11 +46,19 @@ function Navbar() {
 						</div>
 						<Button className='bg-blue-500 px-3'>Apply now</Button>
 					</div>
-					<div>Search</div>
+					<SearchBar />
 				</div>
 			</div>
-			{/* <div className='absolute inset-0 bg-black/30 w-full h-12 z-10' /> */}
-			<Navigation />
+			<motion.div
+				initial={{ y: 20, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				transition={{ delay: 0.2 }}
+				className={`sticky top-0 z-40 transition-all duration-300 ${
+					isScrolled ? 'shadow-lg' : ''
+				}`}
+			>
+				<Navigation />
+			</motion.div>
 		</div>
 	)
 }
