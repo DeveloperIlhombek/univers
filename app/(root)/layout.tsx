@@ -6,7 +6,10 @@ function Layout({
 	children: React.ReactNode
 }>) {
 	return (
-		<div className='container max-w-8xl mx-auto'>
+		<div
+			className='container max-w-8xl mx-auto'
+			// style={{ backgroundImage: "url('/patternbg.png')" }}
+		>
 			<Navbar />
 			<div className='absolute z-20 container border-2'></div>
 			{children}
