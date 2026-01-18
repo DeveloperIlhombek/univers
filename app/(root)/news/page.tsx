@@ -160,7 +160,6 @@ function NewsListPage({
 		})
 	}, [searchQuery, selectedCategory])
 
-	// Pagination logic
 	const totalPages = Math.ceil(filteredNews.length / itemsPerPage)
 	const startIndex = (currentPage - 1) * itemsPerPage
 	const paginatedNews = filteredNews.slice(
@@ -349,7 +348,7 @@ function NewsListPage({
 	)
 }
 
-// News Detail Page Component
+
 function NewsDetailPage({
 	newsId,
 	onBack,

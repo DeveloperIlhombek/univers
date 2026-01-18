@@ -41,7 +41,7 @@ export default function NewsSection() {
 	const [hoveredId, setHoveredId] = useState<number | null>(null)
 
 	return (
-		<div className='min-h-screen  py-16 px-4'>
+		<div className='min-h-screen  py-10 px-4'>
 			<div className='max-w-7xl mx-auto'>
 				{/* Header */}
 				<motion.div
@@ -50,14 +50,14 @@ export default function NewsSection() {
 					transition={{ duration: 0.6 }}
 					className='text-center mb-16'
 				>
-					{/* <motion.h1
-						className='text-6xl font-bold mb-4 bg-linear-to-r from-blue-600 via-blue-700 to-blue-900 bg-clip-text text-transparent'
+					<motion.h1
+						className='text-4xl font-bold p-2 mb-3 bg-linear-to-r from-blue-600 via-blue-700 to-blue-900 bg-clip-text text-transparent uppercase'
 						initial={{ opacity: 0, scale: 0.9 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
 					>
 						Yangiliklar
-					</motion.h1> */}
+					</motion.h1>
 					{/* <motion.div
 						className='w-24 h-1 bg-linear-to-r from-blue-600 to-blue-400 mx-auto rounded-full'
 						initial={{ width: 0 }}
