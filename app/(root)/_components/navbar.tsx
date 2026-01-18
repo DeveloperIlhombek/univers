@@ -28,14 +28,15 @@ function Navbar() {
 					animate={{ opacity: 1, x: 0 }}
 					className='max-w-md'
 				>
-					<h1 className='text-white text-lg font-bold leading-tight drop-shadow-lg'>
-						Alisher Navoiy nomidagi Toshkent davlat o&apos;zbek tili va adabiyot
-						universiteti
+					<h1 className='text-white text-lg font-bold leading-tight drop-shadow-lg flex items-center justify-center gap-2'>
+						<Logo />
+						<p>
+							Alisher Navoiy nomidagi Toshkent davlat o&apos;zbek tili va
+							adabiyot universiteti
+						</p>{' '}
 					</h1>
 				</motion.div>
-				<div className='absolute top-0 left-1/2 -translate-x-1/2 border-white/50 px-6 pt-4 pb-8 rounded-b-full bg-black/70'>
-					<Logo />
-				</div>
+
 				<div className='flex flex-col gap-2 text-white'>
 					<div className=' flex gap-8'>
 						<div className='flex items-center gap-4'>

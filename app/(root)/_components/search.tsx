@@ -1,5 +1,7 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Search, X } from 'lucide-react'
 import { useState } from 'react'
@@ -41,20 +43,21 @@ export default function SearchBar() {
 							<div className='bg-white rounded-2xl shadow-2xl overflow-hidden'>
 								<div className='flex items-center gap-4 p-6 border-b'>
 									<Search className='w-6 h-6 text-gray-400' />
-									<input
+									<Input
 										type='text'
 										placeholder='Qidirish...'
 										value={query}
 										onChange={e => setQuery(e.target.value)}
 										autoFocus
-										className='flex-1 text-lg outline-none'
+										className='flex-1 text-lg outline-none text-black'
 									/>
-									<button
+									<Button
+										variant={'outline'}
 										onClick={() => setIsOpen(false)}
 										className='p-2 hover:bg-gray-100 rounded-lg transition-colors'
 									>
 										<X className='w-5 h-5 text-gray-500' />
-									</button>
+									</Button>
 								</div>
 								{query && (
 									<div className='p-6'>
