@@ -1,4 +1,4 @@
-import { Carousel } from '@/components/ui/carousel'
+import { InfiniteScrollCarousel } from '@/components/ui/carousel'
 
 export function Partners() {
 	const slideData = [
@@ -57,8 +57,8 @@ export function Partners() {
 	]
 
 	return (
-		<section className='py-16 w-full max-w-6xl mx-auto px-4 bg-transparent'>
-			<div className='mb-12'>
+		<section className='py-16 w-full bg-transparent'>
+			<div className='max-w-7xl mx-auto px-4 mb-8'>
 				<h2 className='text-4xl font-bold text-center text-gray-900 mb-4'>
 					Hamkor Universitetlar
 				</h2>
@@ -67,7 +67,7 @@ export function Partners() {
 					hamkorlik qilamiz
 				</p>
 			</div>
-			<Carousel slides={slideData} />
+			<InfiniteScrollCarousel slides={slideData} speed={10} />
 		</section>
 	)
 }
