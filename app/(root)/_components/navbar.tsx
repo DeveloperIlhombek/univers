@@ -18,10 +18,7 @@ function Navbar() {
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 	return (
-		<div
-			className='relative h-42 container  max-w-8xl mx-auto flex flex-col justify-center px-12 items-center'
-			style={{ backgroundImage: "url('/banner.png')" }}
-		>
+		<div className='relative h-42 container  max-w-8xl mx-auto flex flex-col justify-center px-12 items-center bg-blue-900/50'>
 			<div className='h-32 container  max-w-8xl mx-auto flex justify-between px-12 items-center'>
 				<motion.div
 					initial={{ opacity: 0, x: -20 }}

@@ -1,3 +1,4 @@
+import UniversityFooter from './_components/footer'
 import HeroCarousel from './_components/hero'
 import NewsSection from './_components/news'
 import { Partners } from './_components/partners'
@@ -12,6 +13,7 @@ function Page() {
 			<Statistics />
 			<Partners />
 			<Social />
+			<UniversityFooter />
 		</div>
 	)
 }
